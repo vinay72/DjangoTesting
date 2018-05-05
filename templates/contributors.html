@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Contributors Data</title>
+  </head>
+  <body>
+    <h1>Details of all the contributors</h1>
+    <ul>
+      {% for contributor in contributors %}
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <div class="caption">
+                <p>login: {{ contributor.login }}</p>
+                <p>name: {{ contributor.name }}</p>
+                <p>bio: {{ contributor.bio }}</p>
+                <p>num_commits: {{ contributor.num_commits }}</p>
+                <p>reviews: {{ contributor.reviews }}</p>
+                <p>issues_opened: {{ contributor.issues_opened }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      {% endfor %}{# for contributor in contributors #}
+    </ul>
+  </body>
+</html>
